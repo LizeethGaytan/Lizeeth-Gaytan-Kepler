@@ -1,0 +1,109 @@
+ /* TODO: Work on layout */
+ .aura {
+     background-color: #D6F3FE;
+     background: radial-gradient(circle, rgba(214, 243, 254, 1) 0%, rgba(135, 183, 254, 1) 100%);
+     ;
+     padding: 32px;
+ }
+
+ header {
+     background-color: #D6F3FE;
+     padding: 238px;
+
+ }
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: "Open Sans", Roboto;
+
+ }
+
+ h1 {
+     color: #87B7FE;
+     text-shadow: #ffffff 1px 0 10px;
+ }
+
+
+ ul {
+     list-style-type: none;
+     margin-left: 0;
+ }
+
+ footer {
+     padding: 32px;
+     text-align: center;
+     background-color: #D6F3FE;
+     color: #87B7FE;
+ }
+
+ .menu {
+     display: flex;
+     justify-content: space-between;
+     background-color: #D6F3FE;
+     padding: 16px;
+
+
+ }
+
+ .logo {
+
+     font-weight: bold;
+     color: #87B7FE;
+     padding: 16px;
+
+
+ }
+
+ .menu-group {
+     display: flex;
+     list-style-type: none;
+
+
+ }
+
+ .menu-item {
+     font-weight: bold;
+     padding: 8px;
+     color: #87B7FE;
+
+ }
+
+ .link {
+     text-decoration: none;
+
+ }
+
+ #about {
+     background-color: #87B7FE;
+     padding: 119px;
+     color: #D6F3FE;
+ }
+
+ #experience {
+
+     padding: 119px;
+     background-color: #D6F3FE;
+     color: #87B7FE;
+ }
+
+ .columns {
+     display: flex;
+     margin: 32px 0px;
+ }
+
+ .col {
+     text-align: left;
+     margin-right: 144px;
+ }
+
+
+ #connect {
+     padding: 119px;
+     background-color: #87B7FE;
+     color: #D6F3FE;
+ }
+
+ .connect-item {
+     color: #D6F3FE;
+ }
