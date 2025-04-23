@@ -38,7 +38,10 @@
  }
 
  .menu {
+
      display: flex;
+     position: sticky;
+     top: 0;
      justify-content: space-between;
      background-color: #D6F3FE;
      padding: 16px;
@@ -87,14 +90,31 @@
      color: #87B7FE;
  }
 
- .columns {
+ .row {
      display: flex;
      margin: 32px 0px;
+     justify-content: space-between;
+
+
  }
 
  .col {
-     text-align: left;
-     margin-right: 144px;
+     display: flex;
+     flex-flow: column wrap;
+ }
+
+ #skills {
+     padding: 119px;
+     background-color: #87B7FE;
+     color: #D6F3FE;
+
+ }
+
+ #projects {
+     padding: 119px;
+     background-color: #D6F3FE;
+     color: #87B7FE;
+
  }
 
 
