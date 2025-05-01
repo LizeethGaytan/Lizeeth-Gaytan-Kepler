@@ -1,4 +1,3 @@
- /* TODO: Work on layout */
  .aura {
      background-color: #D6F3FE;
      background: radial-gradient(circle, rgba(214, 243, 254, 1) 0%, rgba(135, 183, 254, 1) 100%);
@@ -6,9 +5,12 @@
      padding: 32px;
  }
 
+ /* TODO: Organize the padding for all elements. It's currently not intuitive and confusing */
  header {
      background-color: #D6F3FE;
-     padding: 238px;
+     width: 100%;
+     height: 100vh;
+     align-content: center;
 
  }
 
@@ -22,12 +24,15 @@
  h1 {
      color: #87B7FE;
      text-shadow: #ffffff 1px 0 10px;
+     text-align: center;
+
  }
 
 
  ul {
      list-style-type: none;
      margin-left: 0;
+     display: contents;
  }
 
  footer {
@@ -61,8 +66,7 @@
  .menu-group {
      display: flex;
      list-style-type: none;
-
-
+     align-items: center;
  }
 
  .menu-item {
@@ -78,9 +82,15 @@
  }
 
  #about {
+     display: grid;
      background-color: #87B7FE;
      padding: 119px;
      color: #D6F3FE;
+ }
+
+ .about-grid-item {
+     grid-column-start: 1;
+     grid-column-end: 2;
  }
 
  #experience {
@@ -92,6 +102,7 @@
 
  .row {
      display: flex;
+     flex-wrap: wrap;
      margin: 32px 0px;
      justify-content: space-between;
 
@@ -104,10 +115,18 @@
  }
 
  #skills {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto auto;
+     column-gap: 10em;
      padding: 119px;
      background-color: #87B7FE;
      color: #D6F3FE;
+ }
 
+ .grid-title {
+     grid-column-start: 1;
+     grid-column-end: span 3;
  }
 
  #projects {
@@ -126,4 +145,52 @@
 
  .connect-item {
      color: #D6F3FE;
+ }
+
+ /* Mobile Screen size */
+ @media(max-width: 534px) {
+     body {
+         font-size: .5rem;
+     }
+
+     .menu {
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+
+     h1 {
+         padding: 16px;
+     }
+
+     #skills {
+         grid-template-rows: auto auto auto auto;
+         row-gap: 2em;
+
+     }
+
+     .grid-item {
+         grid-column-start: 1fr;
+         grid-column-end: span 3;
+     }
+
+     #about {
+         row-gap: 2em;
+     }
+ }
+
+ /* Tablet Screen Size */
+ @media(max-width: 768px) {
+     body {
+         font-size: .75rem;
+     }
+
+     #skills {
+         grid-template-columns: 1fr;
+         justify-content: center;
+     }
+
+     .menu-item {
+         padding-left: 0px;
+     }
+
  }
