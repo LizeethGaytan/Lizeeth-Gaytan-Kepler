@@ -1,11 +1,12 @@
  .aura {
      background-color: #D6F3FE;
-     background: radial-gradient(circle, rgba(214, 243, 254, 1) 0%, rgba(135, 183, 254, 1) 100%);
+     background: linear-gradient(270deg, rgba(214, 243, 254, 1) 0%, rgba(135, 183, 254, 1) 100%);
+     /* background: radial-gradient(circle, rgba(214, 243, 254, 1) 0%, rgba(135, 183, 254, 1) 100%); */
      ;
-     padding: 32px;
+
  }
 
- /* TODO: Organize the padding for all elements. It's currently not intuitive and confusing */
+ /* TODO: Organize the padding for all elements. It's confusing */
  header {
      background-color: #D6F3FE;
      width: 100%;
@@ -136,6 +137,12 @@
 
  }
 
+ #personality {
+     display: grid;
+     padding: 119px;
+     color: #D6F3FE;
+ }
+
 
  #connect {
      padding: 119px;
@@ -186,7 +193,7 @@
 
      #skills {
          grid-template-columns: 1fr;
-         justify-content: center;
+         /* justify-content: center; */
      }
 
      .menu-item {
