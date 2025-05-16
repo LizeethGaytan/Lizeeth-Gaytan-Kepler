@@ -154,6 +154,62 @@
      color: #D6F3FE;
  }
 
+ #message {
+     padding: 119px;
+     background-color: #D6F3FE;
+     color: #87B7FE;
+ }
+
+ input,
+ textarea {
+     padding: 5px 10px;
+     display: block;
+     font-family: inherit;
+     width: 75%;
+     box-sizing: border-box;
+     border-radius: 5px;
+     border-color: #87B7FE;
+ }
+
+ /* TODO: remove border shadow */
+ button {
+     padding: 5px 10px;
+     min-width: 40px;
+     min-height: 48px;
+     width: 25%;
+     border-radius: 5px;
+     border-color: #87B7FE;
+     background-color: #87B7FE;
+     color: #ffffff;
+ }
+
+ #messages {
+     padding: 119px;
+     background-color: #D6F3FE;
+     color: #87B7FE;
+ }
+
+ /* Tablet Screen Size */
+ @media(max-width: 768px) {
+     body {
+         font-size: .75rem;
+     }
+
+     #skills {
+         grid-template-columns: 1fr;
+         /* justify-content: center; */
+     }
+
+     .menu-item {
+         padding-left: 0px;
+     }
+
+     button {
+         width: 50%;
+         font-size: .75rem;
+     }
+ }
+
  /* Mobile Screen size */
  @media(max-width: 534px) {
      body {
@@ -183,21 +239,15 @@
      #about {
          row-gap: 2em;
      }
- }
 
- /* Tablet Screen Size */
- @media(max-width: 768px) {
-     body {
-         font-size: .75rem;
+     input,
+     textarea {
+         width: 100%;
      }
 
-     #skills {
-         grid-template-columns: 1fr;
-         /* justify-content: center; */
-     }
-
-     .menu-item {
-         padding-left: 0px;
+     button {
+         width: 100%;
+         font-size: .5rem;
      }
 
  }
