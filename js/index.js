@@ -1,5 +1,5 @@
 // HTML elements stored in variables
-// below method seems faulty b/c it returns a collection so you need to get the index
+// below method returns a collection, not useful for this specidic instance, so you need to get the index
 // const body = document.getElementsByTagName('body').item(0);
 const body = document.querySelector('body');
 const main = document.querySelector('main');
@@ -32,3 +32,42 @@ body.appendChild(footer);
 // Append copyright element, paragraph, to the footer
 footer.appendChild(copyright);
 
+// Message Form
+const messageForm = document.querySelector('[name="leave_message"]');
+
+messageForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let userName = event.target.usersName;
+    let userEmail = event.target.usersEmail;
+    let userMessage = event.target.usersMessage;
+    let userNameVal = userName.value;
+    let userEmailVal = userEmail.value;
+    let userMessageVal = userMessage.value;
+
+    console.log(userNameVal, userEmailVal, userMessageVal);
+    const messageSection = document.getElementById('messages');
+    let messageList = messageSection.querySelector('ul');
+    const newMessage = document.createElement('li');
+    const anchor = document.createElement('a');
+    const anchorTxt = document.createTextNode(userNameVal);
+    anchor.setAttribute('href', 'mailto:' + userEmailVal);
+    anchor.appendChild(anchorTxt);
+    const span = document.createElement('span');
+    const spanTxt = document.createTextNode(userMessageVal);
+    span.appendChild(spanTxt);
+    newMessage.append(anchor, span);
+    //Remove Btn
+    const removeButton = document.createElement('button');
+    removeButton.setAttribute('type', 'button');
+    removeButton.textContent = 'Remove';
+    removeButton.addEventListener("click", (event) => {
+        const entry = removeButton.parentNode;
+        entry.remove();
+    })
+    // Append removeButton to newMessage element
+    newMessage.appendChild(removeButton);
+    // Append newMessage to messageList element
+    messageList.append(newMessage);
+    // clears form field inputs a/f clicking submit button
+    leave_message.reset();
+})
