@@ -33,6 +33,7 @@ body.appendChild(footer);
 footer.appendChild(copyright);
 
 // Message Form
+// TODO: Hide Messages Section when empty
 const messageForm = document.querySelector('[name="leave_message"]');
 
 messageForm.addEventListener("submit", (event) => {
@@ -71,3 +72,29 @@ messageForm.addEventListener("submit", (event) => {
     // clears form field inputs a/f clicking submit button
     leave_message.reset();
 })
+
+// Fetch API
+fetch('https://api.github.com/users/LizeethGaytan/repos')
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+        const repositories = data;
+        console.log(repositories);
+        // TODO: Turn li's into links
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+        if (Array.isArray(repositories)) {
+            repositories.forEach((repo, i) => {
+                const project = document.createElement('li');
+                project.textContent = repositories[i].name;
+                projectList.appendChild(project);
+            });
+        } else {
+            console.error('Expected an array but got:', repositories);
+        }
+
+    })
+    .catch(error => console.error('Error: ', error))
+
+
+
+
